@@ -6,7 +6,7 @@
 /*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 13:13:42 by timschmi          #+#    #+#             */
-/*   Updated: 2024/12/03 17:23:07 by timschmi         ###   ########.fr       */
+/*   Updated: 2024/12/03 18:26:15 by timschmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,6 @@ void Cat::setIdea(std::string idea)
 
 void Cat::think() const
 {
-	for (int i = 0; this->cat_brain->getIdeas(i) != ""; i++)
+	for (int i = 0; i < 100 && this->cat_brain->getIdeas(i) != ""; i++)
 		std::cout << B << this->type + " idea " << i + 1 << ": " << this->cat_brain->getIdeas(i) << R << std::endl;
 }

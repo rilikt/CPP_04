@@ -6,7 +6,7 @@
 /*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 15:50:17 by timschmi          #+#    #+#             */
-/*   Updated: 2024/12/03 17:27:53 by timschmi         ###   ########.fr       */
+/*   Updated: 2024/12/03 18:26:00 by timschmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,6 @@ void Dog::setIdea(std::string idea)
 
 void Dog::think() const
 {
-	for (int i = 0; this->dog_brain->getIdeas(i) != ""; i++)
+	for (int i = 0; i < 100 && this->dog_brain->getIdeas(i) != ""; i++)
 		std::cout << Y << this->type + " idea " << i + 1 << ": " << this->dog_brain->getIdeas(i) << R << std::endl;
 }

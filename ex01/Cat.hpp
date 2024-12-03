@@ -6,7 +6,7 @@
 /*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 12:40:08 by timschmi          #+#    #+#             */
-/*   Updated: 2024/12/03 17:28:06 by timschmi         ###   ########.fr       */
+/*   Updated: 2024/12/03 18:27:20 by timschmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class Cat : public Animal
 		Cat();
 		Cat(const Cat &other);
 		Cat& operator=(const Cat &other);
-		~Cat();
+		virtual ~Cat();
 
 		void makeSound() const;
 

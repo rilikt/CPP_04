@@ -6,7 +6,7 @@
 /*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 15:50:21 by timschmi          #+#    #+#             */
-/*   Updated: 2024/12/03 17:28:48 by timschmi         ###   ########.fr       */
+/*   Updated: 2024/12/03 18:27:39 by timschmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class Dog : public Animal
 		Dog();
 		Dog(const Dog &other);
 		Dog& operator=(const Dog &other);
-		~Dog();
+		virtual ~Dog();
 
 		void makeSound() const;
 

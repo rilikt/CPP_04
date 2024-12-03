@@ -6,7 +6,7 @@
 /*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 13:20:03 by timschmi          #+#    #+#             */
-/*   Updated: 2024/12/03 17:57:18 by timschmi         ###   ########.fr       */
+/*   Updated: 2024/12/03 18:30:50 by timschmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ int main(void)
 	m->setIdea("Yumm");
 	m->think();
 	Cat meow(*m);
+	meow.think();
+	c->think();
 
 	for (int i = 0; i < 10; i++)
 		d->setIdea("Boone");
