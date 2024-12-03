@@ -6,7 +6,7 @@
 /*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 13:20:03 by timschmi          #+#    #+#             */
-/*   Updated: 2024/12/03 15:58:57 by timschmi         ###   ########.fr       */
+/*   Updated: 2024/12/03 17:41:02 by timschmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,30 +18,40 @@ int main(void)
 {
 	std::cout << Bg_G << Bl << "     Constructor     " << R << std::endl;
 	
-	const Animal *a = new Animal();
-	const Animal *c = new Cat();
-	const Animal *d = new Dog();
+	Cat *c = new Cat();
+	Cat *m = new Cat();
 
-	const WrongAnimal *w = new WrongCat();
+	Dog *d = new Dog();
+	Dog *w = new Dog();
 
 	std::cout << Bg_B << Bl << "     Tests     " << R << std::endl;
 	
-	a->makeSound();
-	std::cout << a->getType() << std::endl;
+	for (int i = 0; i < 10; i++)
+		c->setIdea("Fiish");
+	c->think();
+	*m = *c;
+	m->setIdea("Yumm");
+	m->think();
+	Cat meow(*m);
 
-	c->makeSound();
-	std::cout << c->getType() << std::endl;
-
-	d->makeSound();
-	std::cout << d->getType() << std::endl;
-
-	w->makeSound();
-	std::cout << w->getType() << std::endl;
+	for (int i = 0; i < 10; i++)
+		d->setIdea("Boone");
+	d->think();
+	*w = *d;
+	w->setIdea("Yumm");
+	w->think();
+	Dog dawg(*w);
+	dawg.think();
 
 	std::cout << Bg_Ro << Bl << "     Destructor     " << R << std::endl;
 
-	delete a;
-	delete d;
+	std::cout << B << "Allocated Cats" << R << std::endl;
 	delete c;
+	delete m;
+
+	std::cout << Y << "Allocated Dogs" << R << std::endl;
+	delete d;
 	delete w;
+
+	std::cout << Bl << "Stack Animals" << R << std::endl;
 }

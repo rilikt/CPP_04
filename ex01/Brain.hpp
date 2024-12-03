@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/03 12:28:43 by timschmi          #+#    #+#             */
-/*   Updated: 2024/12/03 16:05:41 by timschmi         ###   ########.fr       */
+/*   Created: 2024/12/03 16:00:26 by timschmi          #+#    #+#             */
+/*   Updated: 2024/12/03 16:25:10 by timschmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,18 +29,17 @@
 #define Bg_Y "\033[43m"
 #define Bg_B "\033[44m"
 
-class Animal
+class Brain
 {
-	protected:
-		std::string type;
+	private:
+		std::string ideas[100];
 	
 	public:
-		Animal();
-		Animal(const Animal &other);
-		Animal& operator=(const Animal &other);
-		virtual ~Animal();
+		Brain();
+		Brain(const Brain &other);
+		Brain& operator=(const Brain &other);
+		~Brain();
 
-		virtual void makeSound(void) const;
-
-		std::string getType(void) const;
+		std::string getIdeas(int index) const;
+		void setIdeas(std::string idea, int index);
 };
