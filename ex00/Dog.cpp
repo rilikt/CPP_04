@@ -1,37 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/03 13:13:42 by timschmi          #+#    #+#             */
-/*   Updated: 2024/12/03 13:41:03 by timschmi         ###   ########.fr       */
+/*   Created: 2024/12/03 15:50:17 by timschmi          #+#    #+#             */
+/*   Updated: 2024/12/03 15:52:18 by timschmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./Cat.hpp"
+#include "./Dog.hpp"
 
-Cat::Cat() : Animal()
+Dog::Dog() : Animal()
 {
-	std::cout << G << "Cat constructor called" << R << std::endl;
-	Animal::type = "Cat";
+	std::cout << G << "Dog constructor called" << R << std::endl;
+	Animal::type = "Dog";
 }
 
-Cat::Cat(const Cat &other) : Animal(other) 
+Dog::Dog(const Dog &other) : Animal(other) 
 {
-	std::cout << G << "Cat copy constructor called" << R << std::endl;
+	std::cout << G << "Dog copy constructor called" << R << std::endl;
 
 }
 
-Cat::~Cat()
+Dog::~Dog()
 {
-	std::cout << Ro << "Cat destructor called" << R << std::endl;
+	std::cout << Ro << "Dog destructor called" << R << std::endl;
 }
 
-Cat& Cat::operator=(const Cat &other) 
+Dog& Dog::operator=(const Dog &other) 
 {
-	std::cout << G << "Cat assignment operator called" << R << std::endl;
+	std::cout << G << "Dog assignment operator called" << R << std::endl;
 
 	if (this == &other)
 		return *this;
@@ -40,7 +40,7 @@ Cat& Cat::operator=(const Cat &other)
 	return *this;
 }
 
-void Cat::makeSound() const 
+void Dog::makeSound() const 
 { 
-	std::cout << B << "Meow" << R << std::endl; 
+	std::cout << M << "Wuff" << R << std::endl; 
 }

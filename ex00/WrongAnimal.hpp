@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/03 12:28:43 by timschmi          #+#    #+#             */
-/*   Updated: 2024/12/03 15:52:08 by timschmi         ###   ########.fr       */
+/*   Created: 2024/12/03 15:08:45 by timschmi          #+#    #+#             */
+/*   Updated: 2024/12/03 15:14:17 by timschmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,6 @@
 #define G "\033[32m"
 #define Y "\033[33m"
 #define B "\033[34m"
-#define M "\033[35m"
-
 
 // text background color
 #define Bg_Ro "\033[41m"
@@ -30,18 +28,18 @@
 #define Bg_Y "\033[43m"
 #define Bg_B "\033[44m"
 
-class Animal
+class WrongAnimal
 {
 	protected:
 		std::string type;
 	
 	public:
-		Animal();
-		Animal(const Animal &other);
-		Animal& operator=(const Animal &other);
-		virtual ~Animal();
+		WrongAnimal();
+		WrongAnimal(const WrongAnimal &other);
+		WrongAnimal& operator=(const WrongAnimal &other);
+		virtual ~WrongAnimal();
 
-		virtual void makeSound(void) const;
+		void makeSound(void) const; //no virtual keyword for wrong animal
 
 		std::string getType(void) const;
 };

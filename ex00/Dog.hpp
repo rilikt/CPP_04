@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/03 12:40:08 by timschmi          #+#    #+#             */
-/*   Updated: 2024/12/03 13:35:21 by timschmi         ###   ########.fr       */
+/*   Created: 2024/12/03 15:50:21 by timschmi          #+#    #+#             */
+/*   Updated: 2024/12/03 15:50:44 by timschmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 #include "./Animal.hpp"
 
-class Cat : public Animal
+class Dog : public Animal
 {
 	private:
 
 	public:
-		Cat();
-		Cat(const Cat &other);
-		Cat& operator=(const Cat &other);
-		~Cat();
+		Dog();
+		Dog(const Dog &other);
+		Dog& operator=(const Dog &other);
+		~Dog();
 
 		void makeSound() const;
 };
