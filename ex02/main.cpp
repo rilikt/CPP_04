@@ -6,7 +6,7 @@
 /*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 13:20:03 by timschmi          #+#    #+#             */
-/*   Updated: 2024/12/03 17:57:18 by timschmi         ###   ########.fr       */
+/*   Updated: 2024/12/03 18:04:54 by timschmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ int main(void)
 {
 	std::cout << Bg_G << Bl << "     Constructor     " << R << std::endl;
 	
+	Animal a;
 	Cat *c = new Cat();
 	Cat *m = new Cat();
 
@@ -56,23 +57,3 @@ int main(void)
 	std::cout << Bl << "Stack Animals" << R << std::endl;
 
 }
-
-// int main(void)
-// {
-// 	std::cout << Bg_G << Bl << "     Constructor     " << R << std::endl;
-// 	int size = 10;
-// 	Animal **a = new Animal*[size];
-
-// 	for (int i = 0; i < size; i++)
-// 	{
-// 		if (i < size / 2)
-// 			a[i] = new Cat();
-// 		else
-// 			a[i] = new Dog();
-// 	}
-// 	std::cout << Bg_Ro << Bl << "     Destructor     " << R << std::endl;
-
-// 	for (int i = 0; i < size; i++)
-// 		delete a[i];
-// 	delete [] a;
-// }
